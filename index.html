@@ -282,6 +282,15 @@
             position: relative;
             cursor: pointer;
             transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            object-position: center 10%;
         }
 
         @keyframes photo-magic {
@@ -554,7 +563,7 @@
         </div>
         
         <div class="photo-placeholder" onclick="photoMagic()">
-            Foto di Alex
+            <img src="img/foto-einschulung.jpg" alt="Foto di Alex">
         </div>
         
         <div class="celebration" onclick="celebrationBurst()">🎉 Vieni a festeggiare con noi! 🎉</div>
