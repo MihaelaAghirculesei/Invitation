@@ -204,7 +204,7 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     font-weight: 700;
     text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
     animation: title-explosion 4s ease-in-out infinite;
@@ -423,7 +423,7 @@ h1 {
 }
 
 .celebration {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 25px 0;
     animation: celebration-explosion 2s infinite;
     cursor: pointer;
@@ -645,7 +645,7 @@ h1 {
     }
 
     .detail-item strong {
-       margin-right: 0px; 
+       margin-right: -8px; 
     }
 
     .input-row {
