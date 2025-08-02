@@ -345,7 +345,7 @@ h1 {
     animation: slide-in-magic 1s ease-out;
     transition: all 0.3s ease;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border-radius: 15px;
 }
 
@@ -636,7 +636,7 @@ h1 {
 @media (max-width: 458px) {
     .invitation {
         padding: 6px;
-        font-size: clamp(0.8rem, 9vw, 0.9rem);
+        font-size: clamp(0.6rem, 9vw, 0.7rem);
         letter-spacing: 0;
     }
 
@@ -645,7 +645,7 @@ h1 {
     }
 
     .detail-item strong {
-       margin-right: -8px; 
+       margin-right: -10px; 
     }
 
     .input-row {
