@@ -1,3 +1,68 @@
+const TUO_NUMERO_WHATSAPP = "491749627899";
+
+function sendWhatsAppMessage() {
+    const adulti = parseInt(document.getElementById('adulti').value) || 0;
+    const bambini = parseInt(document.getElementById('bambini').value) || 0;
+    
+    if (adulti < 0 || bambini < 0) {
+        alert('⚠️ I numeri devono essere positivi!');
+        return;
+    }
+    
+    if (adulti == 0 && bambini == 0) {
+        alert('⚠️ Inserisci almeno 1 persona (adulti o bambini)');
+        return;
+    }
+
+    if (adulti > 20 || bambini > 20) {
+        alert('⚠️ Numero troppo alto! Contattaci direttamente per gruppi grandi.');
+        return;
+    }
+    
+    const totalePersone = adulti + bambini;
+    const messaggio = `🎓 CONFERMA PRESENZA - EINSCHULUNG ALEX 🎓
+
+Ciao! Confermo la mia presenza alla festa di Einschulung di Alex:
+
+👨‍👩‍👧‍👦 Adulti: ${adulti}
+🧒 Bambini: ${bambini}
+👥 Totale persone: ${totalePersone}
+
+📅 Data: Sabato 16 Agosto 2025
+🕓 Orario: dalle 16:00
+📍 Dove: Springwisen 29, 38446 Wolfsburg
+
+Non vediamo l'ora di festeggiare questo momento speciale insieme! 🎉📚✏️`;
+
+    const messaggioCodificato = encodeURIComponent(messaggio);
+    
+    const linkWhatsApp = `https://wa.me/${TUO_NUMERO_WHATSAPP}?text=${messaggioCodificato}`;
+    
+    try {
+        window.open(linkWhatsApp, '_blank');
+        
+        createFireworks();
+        createBalloons();
+
+        setTimeout(() => {
+            alert('🎉 Perfetto! WhatsApp si sta aprendo per inviare la conferma! 🎉');
+        }, 500);
+        
+    } catch (error) {
+        alert('❌ Errore nell\'aprire WhatsApp. Copia questo messaggio e invialo manualmente:\n\n' + messaggio);
+        console.error('Errore WhatsApp:', error);
+    }
+}
+
+function validateNumberInput(input) {
+    input.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (parseInt(this.value) > 20) {
+            this.value = 20;
+        }
+    });
+}
+
 function createConfetti() {
     const colors = ['#FF6B35', '#F7931E', '#FFD54F', '#4CAF50', '#2196F3', '#9C27B0'];
     const container = document.getElementById('confetti-container');
@@ -186,6 +251,13 @@ function footerSurprise() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    const adultiInput = document.getElementById('adulti');
+    const bambiniInput = document.getElementById('bambini');
+    
+    validateNumberInput(adultiInput);
+    validateNumberInput(bambiniInput);
+    
     setTimeout(() => {
         createMagicParticles();
     }, 2000);

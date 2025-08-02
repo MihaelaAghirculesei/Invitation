@@ -59,16 +59,36 @@
             <strong>🎒 Celebriamo questo momento speciale insieme! 📚</strong>
         </div>
         
-        <button class="magic-button" onclick="magicConfirmation()">
-            ✨ CONFERMA LA PRESENZA ✨
-        </button>
+        <div class="whatsapp-form">
+            <div class="form-title">
+                <span class="whatsapp-icon">📱</span> Conferma la presenza via WhatsApp
+            </div>
+            
+            <div class="input-group">
+                <div class="input-row">
+                    <label for="adulti">👨‍👩‍👧‍👦 Adulti:</label>
+                    <input type="number" id="adulti" class="number-input" min="0" max="20" value="" placeholder="0">
+                </div>
+                
+                <div class="input-row">
+                    <label for="bambini">🧒 Bambini:</label>
+                    <input type="number" id="bambini" class="number-input" min="0" max="20" value="" placeholder="0">
+                </div>
+            </div>
+            
+            <button class="whatsapp-button" onclick="sendWhatsAppMessage()">
+                <span class="whatsapp-icon">💚</span>
+                INVIA SU WHATSAPP
+                <span class="whatsapp-icon">💚</span>
+            </button>
+        </div>
         
         <div style="margin: 25px 0; font-size: 1.2em; color: #666;">
-            Ti preghiamo di confermare la tua partecipazione entro il 13 agosto 2025.
+            Ti preghiamo di confermare la tua partecipazione entro il <strong>13 agosto 2025</strong>.
         </div>
         
         <div class="footer" onclick="footerSurprise()">
-            📚 ✏️ Un nuovo capitolo inizia! ✏️ 📚
+            Un nuovo capitolo  <br>📚 ✏️inizia! ✏️ 📚
         </div>
     </div>
 
