@@ -29,7 +29,7 @@ Ciao! Confermo la mia presenza alla festa di Einschulung di Alex:
 👥 Totale persone: ${totalePersone}
 
 📅 Data: Sabato 16 Agosto 2025
-🕓 Orario: dalle 16:00
+🕓 Orario: dalle 17:00
 📍 Dove: Springwisen 29, 38446 Wolfsburg
 
 Non vediamo l'ora di festeggiare questo momento speciale insieme! 🎉📚✏️`;
