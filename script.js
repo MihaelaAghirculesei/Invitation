@@ -1,4 +1,4 @@
-const TUO_NUMERO_WHATSAPP = "491749627899";
+const TUO_NUMERO_WHATSAPP = "0123456789";
 
 function sendWhatsAppMessage() {
     const adulti = parseInt(document.getElementById('adulti').value) || 0;
@@ -20,17 +20,17 @@ function sendWhatsAppMessage() {
     }
     
     const totalePersone = adulti + bambini;
-    const messaggio = `🎓 CONFERMA PRESENZA - EINSCHULUNG ALEX 🎓
+    const messaggio = `🎓 CONFERMA PRESENZA - alla festa dell'inizio della scuola - Max 🎓
 
-Ciao! Confermo la mia presenza alla festa di Einschulung di Alex:
+Ciao! Confermo la mia presenza alla festa dell'inizio della scuola - Max
 
 👨‍👩‍👧‍👦 Adulti: ${adulti}
 🧒 Bambini: ${bambini}
 👥 Totale persone: ${totalePersone}
 
-📅 Data: Sabato 16 Agosto 2025
-🕓 Orario: dalle 17:00
-📍 Dove: Springwisen 29, 38446 Wolfsburg
+📅 Data: LA TUA DATA
+🕓 Orario: IL TUO ORARIO
+📍 Dove: IL TUO INDIRIZZO
 
 Non vediamo l'ora di festeggiare questo momento speciale insieme! 🎉📚✏️`;
 
@@ -229,7 +229,7 @@ function highlightDetail(item) {
 }
 
 function magicConfirmation() {
-    alert('🎉 Fantastico! La tua presenza è confermata! 🎉\n\nNon vediamo l\'ora di festeggiare insieme questo momento speciale con Alex! 🎓📚');
+    alert('🎉 Fantastico! La tua presenza è confermata! 🎉\n\nNon vediamo l\'ora di festeggiare insieme questo momento speciale con Max! 🎓📚');
     createFireworks();
     createBalloons();
 }
